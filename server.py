@@ -1,7 +1,9 @@
 #!/usr/bin/python
+import os
 from BaseHTTPServer import BaseHTTPRequestHandler,HTTPServer
 
-PORT_NUMBER = 80
+port = int(os.environ.get("PORT", 5000))
+PORT_NUMBER = port
 
 #This class will handles any incoming request from
 #the browser 
